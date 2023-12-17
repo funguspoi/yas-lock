@@ -1,6 +1,6 @@
 [package]
 name = "yas"
-version = "1.0.12"
+version = "1.0.13"
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -27,7 +27,14 @@ tungstenite = "0.17.3"
 open = "3.2.0"
 
 [target.'cfg(windows)'.dependencies]
-winapi = { version = "0.3", features = ["winuser", "winbase", "wingdi", "winnt", "securitybaseapi", "libloaderapi"] }
+winapi = { version = "0.3", features = [
+    "winuser",
+    "winbase",
+    "wingdi",
+    "winnt",
+    "securitybaseapi",
+    "libloaderapi",
+] }
 
 [build-dependencies]
 winres = "0.1"
