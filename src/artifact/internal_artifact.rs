@@ -84,6 +84,8 @@ pub enum ArtifactSetKey {
     VourukashasGlow,
     MarechausseeHunter,
     GoldenTroupe,
+    SongOfDaysPast,
+    NighttimeWhispersInTheEchoingWoods,
 }
 
 #[derive(Debug, Hash, Clone, PartialEq, Eq, Display)]
@@ -165,6 +167,8 @@ pub enum CharacterKey {
     Furina,
     Chevreuse,
     Navia,
+    Gaming,
+    Liuyun
 }
 
 #[derive(Debug, Clone)]
@@ -522,6 +526,13 @@ impl ArtifactSetKey {
             | "黄金时代的先声"
             | "黄金之夜的喧嚣"
             | "黄金剧团的奖赏" => Some(ArtifactSetKey::GoldenTroupe),
+            "昔时传奏之诗" | "昔时浮想之思" | "昔时遗落之誓" | "昔时回映之音" | "昔时应许之梦" => {
+                Some(ArtifactSetKey::SongOfDaysPast)
+            }
+            "慈爱的淑女帽" | "诚恳的蘸水笔" | "无私的妆饰花" | "忠实的砂时计" | "慷慨的墨水瓶" => {
+                Some(ArtifactSetKey::NighttimeWhispersInTheEchoingWoods)
+            }
+
             _ => None,
         }
     }
@@ -755,6 +766,16 @@ impl ArtifactSlotKey {
             "黄金时代的先声" => Some(ArtifactSlotKey::Sands),
             "黄金之夜的喧嚣" => Some(ArtifactSlotKey::Goblet),
             "黄金剧团的奖赏" => Some(ArtifactSlotKey::Circlet),
+            "昔时传奏之诗" => Some(ArtifactSlotKey::Circlet),
+            "昔时浮想之思" => Some(ArtifactSlotKey::Plume),
+            "昔时遗落之誓" => Some(ArtifactSlotKey::Flower),
+            "昔时回映之音" => Some(ArtifactSlotKey::Sands),
+            "昔时应许之梦" => Some(ArtifactSlotKey::Goblet),
+            "慈爱的淑女帽" => Some(ArtifactSlotKey::Circlet),
+            "诚恳的蘸水笔" => Some(ArtifactSlotKey::Plume),
+            "无私的妆饰花" => Some(ArtifactSlotKey::Flower),
+            "忠实的砂时计" => Some(ArtifactSlotKey::Sands),
+            "慷慨的墨水瓶" => Some(ArtifactSlotKey::Goblet),
             _ => None,
         }
     }
@@ -838,8 +859,10 @@ impl CharacterKey {
             "那维莱特" => Some(CharacterKey::Neuvillette),
             "夏洛蒂" => Some(CharacterKey::Charlotte),
             "芙宁娜" => Some(CharacterKey::Furina),
-            "夏沃蕾	" => Some(CharacterKey::Chevreuse),
-            "娜维娅	" => Some(CharacterKey::Navia),
+            "夏沃蕾" => Some(CharacterKey::Chevreuse),
+            "娜维娅" => Some(CharacterKey::Navia),
+            "嘉明" => Some(CharacterKey::Gaming),
+            "闲云" => Some(CharacterKey::Liuyun),
             _ => None,
         }
     }

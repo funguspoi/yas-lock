@@ -176,6 +176,8 @@ impl CharacterKey {
             CharacterKey::Furina => "芙宁娜",
             CharacterKey::Chevreuse => "夏沃蕾",
             CharacterKey::Navia => "娜维娅",
+            CharacterKey::Gaming => "嘉明",
+            CharacterKey::Liuyun => "闲云",
         };
         String::from(temp)
     }

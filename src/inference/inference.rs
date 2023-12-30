@@ -21,7 +21,7 @@ impl CRNNModel {
         //     .with_input_fact(0, InferenceFact::dt_shape(f32::datum_type(), tvec!(1, 1, 32, 384))).unwrap()
         //     .into_optimized().unwrap()
         //     .into_runnable().unwrap();
-        let bytes = include_bytes!("../../models/model_training.onnx");
+        let bytes = include_bytes!("../../models/model_genshin.onnx");
 
         let model = tract_onnx::onnx()
             .model_for_read(&mut bytes.as_bytes())?

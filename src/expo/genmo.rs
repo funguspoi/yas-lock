@@ -127,7 +127,10 @@ impl ArtifactSetKey {
             ArtifactSetKey::VourukashasGlow => "vourukashas_glow",
             ArtifactSetKey::MarechausseeHunter => "marechaussee_hunter",
             ArtifactSetKey::GoldenTroupe => "golden_troupe",
-
+            ArtifactSetKey::SongOfDaysPast => "song_of_days_past",
+            ArtifactSetKey::NighttimeWhispersInTheEchoingWoods => {
+                "nighttime_whispers_in_the_echoing_woods"
+            }
             // Not supported by Mingyulab
             ArtifactSetKey::Adventurer => unreachable!(),
             ArtifactSetKey::LuckyDog => unreachable!(),
